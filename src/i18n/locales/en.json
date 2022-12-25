@@ -25,6 +25,7 @@
     "your_name": "Your name",
     "your_email": "Your email",
     "message": "Message",
-    "app_name": "SPA Boilerplate"
+    "app_name": "SPA Boilerplate",
+    "search": "Search locations"
   }
 }
