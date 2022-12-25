@@ -15,6 +15,7 @@
     },
     "pages": {
       "shops": "Shops",
+      "shop": "Shop Detail",
       "about_us": "At <0>tablecheck</0> we love connecting diners with restaurants. The purpose of this app is to...",
       "about_us_salute": "Hey there!",
       "report_issue": "If you see any wrong content or something that could be improved in the app, please report it using the form below. Thank you very much!"
@@ -28,5 +29,14 @@
     "message": "Message",
     "app_name": "SPA Boilerplate",
     "search": "Search locations"
+  },
+  "shop_detail": {
+    "name": "Shop Name",
+    "city": "City",
+    "address": "Address",
+    "budget": {
+      "lunch": "Budget of lunch",
+      "dinner": "Budget of dinner"
+    }
   }
 }

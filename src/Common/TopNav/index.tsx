@@ -10,9 +10,9 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { tciSun } from 'tablecheck-icons/tciSun';
 
-import { getI18nextInstance } from 'i18n';
-
 import { Sidenav } from 'Common/Sidenav';
+import { MobileOnlyItems } from 'Common/Sidenav/styles';
+import { getI18nextInstance } from 'i18n';
 
 import {
   DesktopOnlyItems,
@@ -24,7 +24,6 @@ import {
   TopNavContent,
   TopNavWrapper
 } from './styles';
-import { MobileOnlyItems } from 'Common/Sidenav/styles';
 
 export function TopNav({
   isDarkMode,
@@ -45,7 +44,7 @@ export function TopNav({
   const changeLanguage = (locale: string) => {
     let parts = location.pathname.split('/');
     parts = parts.splice(2);
-    const page = `/${locale}/${parts.join('/')}`;
+    const page = `/${locale}/${parts.join('/')}${location.search}`;
 
     navigate(page, { replace: true });
     i18next.changeLanguage(locale);
