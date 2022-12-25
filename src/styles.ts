@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Spacing } from '@tablecheck/tablekit-theme';
 import {
@@ -5,7 +6,6 @@ import {
   TypographyHeadlineDesktop
 } from '@tablecheck/tablekit-typography';
 import { Link } from 'react-router-dom';
-import { keyframes } from '@emotion/react';
 
 export const GRID_MARGIN = Spacing.L4;
 export const GRID_DESKTOP_MAX_WIDTH = '74em';
@@ -18,6 +18,10 @@ export const slideUp = keyframes`
   from { transform: translate3d(0, 100vh, 0); }
   to { translate3d(0, 0, 0); }
 `;
+
+export const slideLeft = keyframes`
+from { transform: translate3d(100vw, 0, 0); }
+  to { translate3d(0, 0, 0); }`;
 
 export const fadeIn = keyframes`
   0% {
@@ -57,10 +61,6 @@ export const PageWrapper = styled.div`
 export const PageContent = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media (min-width: ${BREAKPOINTS.tablet}) {
-    flex-direction: row;
-  }
 `;
 
 export const Headline = styled.h1`

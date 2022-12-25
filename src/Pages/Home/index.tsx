@@ -4,7 +4,7 @@ import { Size } from '@tablecheck/tablekit-theme';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import { Outlet } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 import { useDebounce } from 'react-use';
 
 import { AutoCompleteResponse } from 'types/response';
@@ -14,6 +14,7 @@ import { SearchWrapper, HomeHeadline, HomeWrapper, Locations } from './styles';
 
 export function Home(): JSX.Element {
   const [t, { language }] = useTranslation();
+  const navigate = useNavigate();
 
   // search event
   const [searchVal, setSearchVal] = React.useState('');
@@ -52,7 +53,12 @@ export function Home(): JSX.Element {
         {response && response.locations ? (
           <Locations>
             {response.locations.map(({ text, payload }) => (
-              <Item key={`${text}-${payload.area}`}>{text}</Item>
+              <Item
+                key={`${text}-${payload.area}`}
+                onClick={() => navigate(`shops/${text}`)}
+              >
+                {text}
+              </Item>
             ))}
           </Locations>
         ) : null}
