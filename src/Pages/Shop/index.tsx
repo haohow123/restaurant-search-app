@@ -73,34 +73,37 @@ export function Shop(): JSX.Element {
       <ShopsHeadline>{t('attributes.pages.shop')}</ShopsHeadline>
       {shop ? (
         <ShopDetails>
+          {/* TODO: image carousel */}
           <img src={shop.bannerImage} alt="banner" />
-          <ShopDetail>
-            {t('shop_detail.name')} : {shop.nameTranslation?.translation}
-          </ShopDetail>
-          <ShopDetail>
-            {t('shop_detail.city')} : {shop.address.city}({shop.address.country}
-            )
-          </ShopDetail>
-          <ShopDetail>
-            {t('shop_detail.address')} :
-            {isEn
-              ? `${shop.address.street2}, ${shop.address.street}, ${shop.address.region} (${shop.address.postalCode})`
-              : ` (${shop.address.postalCode}) ${shop.address.region}, ${shop.address.street}, ${shop.address.street2}`}
-          </ShopDetail>
-          <ShopDetail>
-            {t('shop_detail.budget.lunch')} :{' '}
-            {shop.budget.lunch
-              ? `${shop.budget.lunch[0]} ~
+          <div>
+            <ShopDetail>
+              {t('shop_detail.name')} : {shop.nameTranslation?.translation}
+            </ShopDetail>
+            <ShopDetail>
+              {t('shop_detail.city')} : {shop.address.city}(
+              {shop.address.country})
+            </ShopDetail>
+            <ShopDetail>
+              {t('shop_detail.address')} :
+              {isEn
+                ? `${shop.address.street2}, ${shop.address.street}, ${shop.address.region} (${shop.address.postalCode})`
+                : ` (${shop.address.postalCode}) ${shop.address.region}, ${shop.address.street}, ${shop.address.street2}`}
+            </ShopDetail>
+            <ShopDetail>
+              {t('shop_detail.budget.lunch')} :{' '}
+              {shop.budget.lunch
+                ? `${shop.budget.lunch[0]} ~
               ${shop.budget.lunch[0]}`
-              : 'no data'}
-          </ShopDetail>
-          <ShopDetail>
-            {t('shop_detail.budget.dinner')} :{' '}
-            {shop.budget.dinner
-              ? `${shop.budget.dinner[0]} ~
+                : 'no data'}
+            </ShopDetail>
+            <ShopDetail>
+              {t('shop_detail.budget.dinner')} :{' '}
+              {shop.budget.dinner
+                ? `${shop.budget.dinner[0]} ~
               ${shop.budget.dinner[0]}`
-              : 'no data'}
-          </ShopDetail>
+                : 'no data'}
+            </ShopDetail>
+          </div>
         </ShopDetails>
       ) : null}
     </ShopsWrapper>

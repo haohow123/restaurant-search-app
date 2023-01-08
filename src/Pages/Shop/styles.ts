@@ -22,9 +22,14 @@ export const ShopDetails = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
+  gap: ${Spacing.L2};
 
   @media (min-width: ${BREAKPOINTS.tablet}) {
     padding: 0 ${Spacing.L8};
+  }
+
+  @media (min-width: ${BREAKPOINTS.desktop}) {
+    flex-direction: row;
   }
 `;
 
