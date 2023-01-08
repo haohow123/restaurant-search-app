@@ -28,7 +28,8 @@
     "your_email": "あなたのメール",
     "message": "メッセージ",
     "app_name": "SPA Boilerplate",
-    "search": "場所を検索"
+    "search": "場所を検索",
+    "no-shop": "申し訳ありませんが、ここにはパートナーがいません。"
   },
   "shop_detail": {
     "name": "ショップ名",

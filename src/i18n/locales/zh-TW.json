@@ -28,7 +28,8 @@
     "your_email": "你的郵件",
     "message": "信息",
     "app_name": "SPA Boilerplate",
-    "search": "尋找地區"
+    "search": "尋找地區",
+    "no-shop": "抱歉，我們這裡沒有合作夥伴。"
   },
   "shop_detail": {
     "name": "商家名稱",

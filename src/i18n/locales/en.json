@@ -28,7 +28,8 @@
     "your_email": "Your email",
     "message": "Message",
     "app_name": "SPA Boilerplate",
-    "search": "Search locations"
+    "search": "Search locations",
+    "no-shop": "Sorry, we have no partners here."
   },
   "shop_detail": {
     "name": "Shop Name",

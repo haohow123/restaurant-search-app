@@ -7,7 +7,7 @@ import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import { AutoCompleteResponse } from 'types/response';
 import { useFetch } from 'utils/useFetch';
 
-import { ShopsHeadline, ShopsWrapper, ShopList } from './styles';
+import { ShopsHeadline, ShopsWrapper, ShopList, SorryMessage } from './styles';
 
 export function Shops(): JSX.Element {
   const [t, { language }] = useTranslation();
@@ -34,7 +34,7 @@ export function Shops(): JSX.Element {
         )}`}</title>
       </Helmet>
       <ShopsHeadline>{t('attributes.pages.shops')}</ShopsHeadline>
-      {response && geoData ? (
+      {response && response.shops && geoData ? (
         <ShopList>
           {response.shops.map(({ text, payload }) => (
             <Item
@@ -49,7 +49,9 @@ export function Shops(): JSX.Element {
             </Item>
           ))}
         </ShopList>
-      ) : null}
+      ) : (
+        <SorryMessage>{t('keywords.no-shop')}</SorryMessage>
+      )}
     </ShopsWrapper>
   );
 }

@@ -19,7 +19,15 @@ export const ShopsHeadline = styled(Headline)`
 `;
 
 export const ShopList = styled(ItemGroup)`
-margin:0 auto;
-@media (min-width: ${BREAKPOINTS.tablet}) {
-  max-width:368px
+  margin: 0 auto;
+  @media (min-width: ${BREAKPOINTS.tablet}) {
+    max-width: 368px;
+  }
+`;
+
+export const SorryMessage = styled('p')`
+  margin: 0 auto;
+  @media (min-width: ${BREAKPOINTS.tablet}) {
+    max-width: 368px;
+  }
 `;
